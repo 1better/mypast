@@ -1,0 +1,480 @@
+/*今日必抢部分*/
+.robbed {
+    width: 100%;
+    height: 294px;
+}
+.robbed-left {
+    width: 231px;
+    height: 250px;
+    padding-top: 44px;
+    background-color: #F37E91;
+    float: left;
+    position: relative;
+}
+.robbed-left-top {
+    width: 100%;
+    text-align: center;
+    height: 182px;
+    background: url("../images/12.png") no-repeat center 72px;
+}
+.robbed-left-top p{
+    width: 100%;
+    font-size: 38px;
+    height: 37px;
+    color: #fff;
+    font-family: microsoft yahei;
+    letter-spacing: 12px;
+}
+.robbed-left-top b {
+    font-size: 12px;
+    font-style: italic;
+    color: #fff;
+}
+.robbed-left span {
+    display: inline-block;
+    margin-top: 85px;
+    font-size: 16px;
+    color: #fff;
+}
+.robbed-left-bottom {
+    padding-left: 42px;
+    width: 188px;
+    height: 68px;
+    position: relative;
+}
+.robbed-left-bottom span {
+    position: absolute;
+    left: 88px;
+    top: -75px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+}
+.robbed-left-bottom span:nth-child(5) {
+    left: 148px;
+}
+.robbed-left-bottom .square {
+    width: 41px;
+    height: 41px;
+    border-radius: 4px;
+    background-color: #000;
+    float: left;
+    margin-right: 19px;
+}
+.robbed-left-bottom .square i {
+    display: inline-block;
+    font-size: 21px;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    color: #fff;
+    line-height: 2.2;
+}
+/*设定右边轮播图的a*/
+.robbed-left .arrow a {
+    position: absolute;
+    width: 26px;
+    height: 46px;
+    background-color: rgba(0,0,0,0.2);
+    top: 20px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 46px;
+    color: #fff;
+    left: 1165px;
+    top: 116px;
+    z-index: 1;
+}
+.robbed-left .arrow a:nth-child(1) {
+    left: 231px;
+}
+.robbed-right {
+    float: left;
+    position: relative;
+    margin-top: 30px;
+    width: 920px;
+    height: 263px;
+    overflow: hidden;
+    margin-left: 40px;
+}
+.robbed-right ul {
+    width: 550%;
+    height: 263px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.robbed-right ul li {
+    float: left;
+    width: 920px;
+    height: 263px;
+}
+.robbed-right li div {
+    margin-right: 40px;
+    width: 190px;
+    height: 263px;
+    float: left;
+}
+.robbed-right li div a {
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 17px;
+    overflow: hidden;
+}
+.robbed-right li div img {
+    width: 190px;
+    height: 190px;
+    transition: all  0.5s;
+}
+.robbed-right li div:hover img {
+    transform: scale(1.3,1.3);
+}
+.robbed-right li div p {
+    font-size: 16px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.robbed-right li div span {
+    color: #FF4B6E;
+    float: left;
+}
+.robbed-right li div del {
+    float: right;
+    font-size: 12px;
+    margin-right: 10px;
+    color: #B79997;
+}
+/*大牌选择部分*/
+.select {
+    width: 1250px;
+    height: 150px;
+    margin-top: 10px;
+}
+.select-left {
+    width: 470px;
+    height: 150px;
+    float: left;
+    background: url("../images/img1.jpg") no-repeat;
+}
+.select-right {
+    width: 750px;
+    height: 150px;
+    float: left;
+}
+.select-right-d {
+    float: left;
+    width: 230px;
+    height: 150px;
+    margin-left: 11px;
+    background: url("../images/img2.jpg") no-repeat;
+    cursor: pointer;
+}
+.select-right-d:nth-child(2) {
+    background: url("../images/img3.jpg") no-repeat;
+}
+.select-right-d:nth-child(3) {
+    background: url("../images/img4.jpg") no-repeat;
+}
+/*女装nav-clothes部分*/
+.nav-clothes {
+    width: 100%;
+    height: 86px;
+}
+.nav-clothes ul {
+    width: 100%;
+    height: 86px;
+    background-color: #F5F5F5;
+    position: relative;
+}
+.nav-clothes ul li {
+    float: left;
+    font-size: 15px;
+    padding:0  19px;
+    height: 24px;
+    margin-top: 50px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.nav-clothes ul li:nth-child(2) {
+    margin-left: 27px;
+}
+.nav-clothes ul  b {
+    position: absolute;
+    left: 0;
+    top: 47px;
+    width: 19px;
+    height: 19px;
+    font-size: 18px;
+    color: #FF0076;
+}
+.nav-clothes span {
+    float: left;
+    margin-top: 47px;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 18px;
+}
+.nav-clothes ul  i{
+    float: left;
+    margin-top: 50px;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    font-style: normal;
+    cursor: pointer;
+}
+.nav-clothes .red {
+    background-color: rgba(255,0,0,0.2);
+    color: #fff;
+}
+/*女装women-clothes部分*/
+.women-clothes {
+    width: 100%;
+    height: 624px;
+}
+.women-clothes-left {
+    float: left;
+    width: 229px;
+    height: 624px;
+    background: url("../images3/icon5.jpg") no-repeat;
+    margin-right: 11px;
+    position: relative;
+}
+.women-clothes-left .arrow a{
+    position: absolute;
+    width: 26px;
+    height: 46px;
+    background-color: rgba(0,0,0,0.2);
+    top: 20px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 46px;
+    color: #fff;
+    left: 1150px;
+    top: 145px;
+    z-index: 1;
+}
+.arrow a:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+.women-clothes-left .arrow a:nth-child(1) {
+    left: 257px;
+}
+
+.women-clothes-right {
+    float: left;
+    height: 624px;
+    width: 952px;
+}
+.women-clothes-right-top {
+    width: 100%;
+    height: 408px;
+    /*background-color: pink;*/
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.women-clothes-right-top ul {
+    height: 408px;
+    width: 450%;
+    position: absolute;
+}
+.women-clothes-right-top ul li{
+    float: left;
+    width: 962px;
+    height: 408px;
+}
+.women-clothes-right-top ul li div {
+    padding: 16px ;
+    float: left;
+    width: 198px;
+    height: 376px;
+    margin-right: 10px;
+    background-color: #fff;
+    /*text-align: center;*/
+}
+
+.women-clothes-right-top ul li div a {
+    display: inline-block;
+    margin-bottom: 11px;
+    width: 198px;
+    height: 297px;
+    overflow: hidden;
+}
+.women-clothes-right-top ul div img {
+    width: 198px;
+    height: 297px;
+    transition: all 0.5s;
+}
+.women-clothes-right-top ul div:hover img{
+    transform: scale(1.3,1.3);
+}
+.women-clothes-right-top ul li div p {
+    width:100%;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.women-clothes-right-top ul li div i {
+    font-size: 17px;
+    color: #FE5677;
+}
+.women-clothes-right-top ul li div span {
+    font-size: 13px;
+}
+.women-clothes-right-center {
+    width: 105%;
+    height: 112px;
+    margin-bottom: 12px;
+}
+.women-clothes-right-center>div {
+    float: left;
+    width: 230px;
+    height: 112px;
+    background-color: pink;
+    margin-right: 9px;
+}
+.women-clothes-right-center .sumNewClothes {
+    width: 471px;
+    height: 112px;
+    margin-right: 9px;
+    background-color: blue;
+}
+.women-clothes-right-bottom {
+    width: 105%;
+    height: 82px;
+}
+.women-clothes-right-bottom>div {
+    float: left;
+    height: 82px;
+    margin-right: 9px;
+    width: 230px;
+    background-color: #FF0076;
+}
+
+.andOrnament-left {
+    width: 231px;
+    height: 555px;
+    float: left;
+    margin-right: 10px;
+    background-color: pink;
+}
+/*.andOrnament-left img {*/
+    /*width: 231px;*/
+    /*height: 555px;*/
+/*}*/
+.andOrnament-center {
+    float: left;
+    width: 610px;
+    height: 535px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 20px;
+    position: relative;
+    background-color: #fff;
+}
+.andOrnament-center1 {
+      position: absolute;
+      width: 610px;
+      height: 535px;
+}
+.andOrnament-center2 {
+    position: absolute;
+    width: 610px;
+    height: 535px;
+}
+.andOrnament-center li {
+    float: left;
+    width: 182px;
+    height: 257px;
+    padding-right: 20px;
+    /*background-color: #00475D;*/
+    margin-bottom: 1px;
+}
+.andOrnament-center img {
+    width: 182px;
+    height: 182px;
+    margin-bottom: 8px;
+
+}
+.andOrnament-center p {
+    font-size: 13px;
+    margin-bottom: 11px;
+    color: #000;
+}
+.andOrnament-center span {
+    font-size: 15px;
+    color: #FF4B6E;
+}
+.andOrnament-center  i {
+    font-size: 12px;
+}
+.andOrnament-center .circle {
+    position: absolute;
+    width: 210px;
+    height: 38px;
+    left: 50%;
+    margin-left: -52px;
+    bottom: -23px;
+    z-index: 1;
+}
+.andOrnament-center .circle>i {
+    float: left;
+    width: 7px;
+    height: 7px;
+    background: url("../images3/i-1.png") no-repeat;
+    margin-right: 19px;
+}
+.andOrnament-center .circle .changeBlack {
+    background: url("../images3/i-2.png") no-repeat;
+}
+.andOrnament-right {
+    float: right;
+    width: 293px;
+    padding-left: 17px;
+    height: 555px;
+    margin-left: 9px;
+    background-color: #fff;
+}
+.andOrnament-right span {
+    font-size: 18px;
+}
+.andOrnament-right a {
+    float: right;
+    margin-right: 16px;
+}
+.andOrnament-right-top {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+}
+.andOrnament-right-center {
+    width: 100%;
+}
+
+
+.andOrnament-right-center li {
+    height: 93px;
+    width: 100%;
+    padding-bottom: 21px;
+}
+.andOrnament-right-center li img {
+    width: 93px;
+    height: 93px;
+    float: left;
+    margin-right: 9px;
+}
+.andOrnament-right-center li p {
+    float: left;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+}
+.andOrnament-right-center li span {
+    font-size: 16px;
+    color: #ffa5a5;
+}
+.andOrnament-right-center li i {
+    font-size: 12px;
+}

@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoGuStreet</title>
+    <link rel="icon" href="images/show2.ico">
+    <!--这个是上一个的升级版，-->
+    <!--添加一点没有的东西，把上次的bug解决掉，-->
+    <!--并且添加js功能，要考虑全面-->
+    <!--希望这个能写到jquery那里。-->
+    <!--关键词
+        商家后台 shopBack
+        购物车  shopCar
+        我的订单 myPay
+        下边出现 downShow
+        下拉列表 downList
+        夏季上新 sumNewClothes
+        打折     sumNewPay
+        配饰     ornament
+    -->
+    <link rel="stylesheet" href="css/baselevel2.css">
+    <link rel="stylesheet" href="css/indexlevel2.css">
+    <!--原生js编写 实现无缝轮播 以及导航条的高亮显示以及下方服装的切换
+        以及今日必抢部分时间的切换
+        js缓动框架屏幕的顶部跳转
+        -->
+    <script src="js/index.js"></script>
+    <!--jquery编写（实现内衣配饰以及电器等淡入淡出）上方
+    首页的display属性也用jquery练习了一下-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/indexincludejq.js"></script>
+    <!--c3功能实现今日必抢以及女装部分图片的放缩
+        图片利用的是本页面的大部分，找不到。。。，
+    -->
+    <!--使用web字体实现导航部分的长方形快以及刷新左边的小图标
+       没找到长方形的，用了一个小蘑菇代替，用的ali字体库
+    -->
+    <!--底部我觉得居中比较好看，没按原图来-->
+</head>
+<body>
+    <div class="header">
+        <!--用户信息部分-->
+        <div class="userInfoContent">
+            <div class="w">
+                <div class="userInfoContent-left">
+                    <i></i>
+                    <span>蘑菇街首页</span>
+                </div>
+                <ul class="userInfoContent-right">
+                    <li class="shopBack">
+                        <!--包含的内容-->
+                        <a href='#'  >
+                            <i></i>
+                            <span>商家后台</span>
+                            <b><u>◇</u></b>
+                        </a>
+                        <div class="downShow hide">
+                            <a href="#">商家导航</a>
+                            <a href="#">合作管理</a>
+                            <a href="#">问题咨询</a>
+                            <a href="#">app</a>
+                            <a href="#">资格查询</a>
+                            <a href="#">联系我们</a>
+                            <a href="#">商家导航</a>
+                            <a href="#">合作管理</a>
+                            <a href="#">问题咨询</a>
+                            <a href="#">app</a>
+                            <a href="#">资格查询</a>
+                            <a href="#">联系我们</a>
+                            <a href="#">商家导航</a>
+                            <a href="#">合作管理</a>
+                            <a href="#">问题咨询</a>
+                            <a href="#">app</a>
+                        </div >
+                    </li>
+                    <i>|</i>
+                    <li class="serve">
+                        <a href="#">
+                            <span>客户服务</span>
+                            <b><u>◇</u></b>
+                        </a>
+                        <div class="downServe hide">
+                            <a href="#">在线客服</a>
+                            <a href="#">手机客服</a>
+                            <a href="#"> 帮助中心</a>
+                        </div>
+                    </li>
+                    <i>|</i>
+                    <li class="shopCar">
+                        <a href="#">
+                            <i></i>
+                            <span>购物车</span>
+
+                        </a>
+                    </li>
+                    <i>|</i>
+                    <li class="myPay">
+                        <a href="#">
+                            <i></i>
+                            <span>我的订单</span>
+
+                        </a>
+                    </li>
+                    <i>|</i>
+                    <li>
+                        <a href="#">
+                            <span>登录</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--logo部分-->
+        <div class="logo-w">
+            <div class="w">
+                <!--logo部分-->
+                <div class="logo clearfix">
+                    <div class="logo-left">
+                        <img src="images/06.png" alt="">
+                    </div>
+                    <div class="search">
+                        <div class="downList">
+                            <span>搜商品</span>
+                            <i></i>
+                            <div class="downList-down hide">
+                                <span>裙子</span>
+                                <span>衣服</span>
+                                <span>盘子</span>
+                                <span>裤子</span>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="手机壳">
+                        <input type="submit" value="搜索">
+                        <div class="search-a">
+                            <a href="#">口红</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">口红</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">口红</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">口红</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">口红</a>
+                            <a href="#">连衣裙</a>
+                        </div>
+                    </div>
+                    <div class="erweima-right">
+                        <span>扫码下载蘑菇街<br>并在APP内注册</span>
+                        <p>开启掌上购物之旅</p>
+                        <i></i>
+                        <div class="erweima-big hide">
+                            <img src="images3/icon4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--主题市场nav导航内容-->
+        <div class="navCon">
+            <ul>
+                <li class="market">
+                    <i></i>
+                    <span>主题市场</span>
+                    <div class="subMenu">
+                        <ol>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#" class="redWords">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#" class="redWords">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                            <li>
+                                <span>上衣</span>
+                                <a href="#">T恤</a>
+                                <i></i>
+                                <a href="#">夏上新</a>
+                                <a href="#">入夏套装</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="pinxian pinpai">
+                    <a href="#">品牌团购</a>
+                </li>
+                <i>|</i>
+                <li class="pinxian"><a href="#">限时快抢</a></li>
+            </ul>
+
+        </div>
+        <!-- 主背景main-nav部分-->
+        <div class="main-nav">
+            <div class="mainback"></div>
+            <div class="main-nav-top">
+                <div class="main-nav-top-circle"></div>
+                <p>菇凉好！&nbsp;&nbsp;<span>欢迎来到蘑菇街~</span></p>
+                <a href="#">会员中心</a>
+            </div>
+            <div class="main-nav-bottom">
+                <div class="main-nav-bottom-top">
+                    <p class="invite"><a href="#">邀请好友</a></p>
+                    <p >共享收益分红</p>
+                </div>
+            </div>
+        </div>
+        <!--顶部跳转箭头部分-->
+        <div id = "arrow-top" class="arrow-top hide">></div>
+    </div>
+    <div class="content">
+        <!--今日必抢robbed部分-->
+        <div class="w">
+            <div class="robbed">
+                <div class="robbed-left">
+                    <div class="robbed-left-top">
+                        <p>今日必抢</p>
+                        <b>Panic Purshing</b>
+                        <span>/ &nbsp;&nbsp;每日整点上线&nbsp;&nbsp; /</span>
+                    </div>
+                    <div class="robbed-left-bottom">
+                        <div class="square"><i>00</i></div>
+                        <div class="square"><i>00</i></div>
+                        <div class="square"><i>00</i></div>
+                        <span>:</span>
+                        <span>:</span>
+                    </div>
+                    <div class="arrow">
+                        <a href="javascript:void(0);">&lt;</a>
+                        <a href="javascript:void(0);">&gt;</a>
+                    </div>
+                </div>
+                <div class="robbed-right">
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                                <p>显瘦格子吊带裙</p>
+                                <p><span>￥79.90</span><del>￥165.00</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_07.jpg" alt=""></a>
+                                <p>chic同款潮码...</p>
+                                <p><span>￥39.90</span><del>￥82.86</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                                <p>郑爽同款...</p>
+                                <p><span>￥45.00</span><del>￥84.29</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_04.jpg" alt=""></a>
+                                <p>针织卫衣...</p>
+                                <p><span>￥89.90</span><del>￥150.00</del></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_09.jpg" alt=""></a>
+                                <p>显瘦格子吊带裙</p>
+                                <p><span>￥79.90</span><del>￥165.00</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                                <p>chic同款潮码...</p>
+                                <p><span>￥39.90</span><del>￥82.86</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_18.jpg" alt=""></a>
+                                <p>郑爽同款...</p>
+                                <p><span>￥45.00</span><del>￥84.29</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_04.jpg" alt=""></a>
+                                <p>针织卫衣...</p>
+                                <p><span>￥89.90</span><del>￥150.00</del></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                                <p>显瘦格子吊带裙</p>
+                                <p><span>￥79.90</span><del>￥165.00</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_23.jpg" alt=""></a>
+                                <p>chic同款潮码...</p>
+                                <p><span>￥39.90</span><del>￥82.86</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_24.jpg" alt=""></a>
+                                <p>郑爽同款...</p>
+                                <p><span>￥45.00</span><del>￥84.29</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_07.jpg" alt=""></a>
+                                <p>针织卫衣...</p>
+                                <p><span>￥89.90</span><del>￥150.00</del></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_23.jpg" alt=""></a>
+                                <p>显瘦格子吊带裙</p>
+                                <p><span>￥79.90</span><del>￥165.00</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_18.jpg" alt=""></a>
+                                <p>chic同款潮码...</p>
+                                <p><span>￥39.90</span><del>￥82.86</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                                <p>郑爽同款...</p>
+                                <p><span>￥45.00</span><del>￥84.29</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_09.jpg" alt=""></a>
+                                <p>针织卫衣...</p>
+                                <p><span>￥89.90</span><del>￥150.00</del></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                                <p>显瘦格子吊带裙</p>
+                                <p><span>￥79.90</span><del>￥165.00</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_07.jpg" alt=""></a>
+                                <p>chic同款潮码...</p>
+                                <p><span>￥39.90</span><del>￥82.86</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                                <p>郑爽同款...</p>
+                                <p><span>￥45.00</span><del>￥84.29</del></p>
+                            </div>
+                            <div>
+                                <a href="#"><img src="images2/images/img1_04.jpg" alt=""></a>
+                                <p>针织卫衣...</p>
+                                <p><span>￥89.90</span><del>￥150.00</del></p>
+                            </div>
+                        </li>
+                        <!--<li>-->
+                            <!--<div class="imgs">-->
+                                <!--<a href="#"><img src="images2/images/img1_09.jpg" alt=""></a>-->
+                            <!--</div>-->
+                            <!--<p>针织卫衣搭配松紧裤</p>-->
+                            <!--<i>￥89.00</i> <del>￥150.00</del>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--大牌选择select部分-->
+        <div class="w">
+            <div class="select">
+                <div class="select-left"><a href="#"></a></div>
+                <div class="select-right">
+                    <div class="select-right-d"></div>
+                    <div class="select-right-d"></div>
+                    <div class="select-right-d"></div>
+                </div>
+            </div>
+        </div>
+        <!--服装nav-clothes-->
+        <!--女装部分women-clothes部分-->
+        <div class="w womenClothes">
+            <div class="nav-clothes">
+                <ul>
+                    <b class="iconfont">&#xe64a;</b>
+                    <span>女装</span>
+                    <li>印花体恤</li>
+                    <i>|</i>
+                    <li>爆款套装</li>
+                    <i>|</i>
+                    <li>连衣裙</li>
+                    <i>|</i>
+                    <li>休闲裤</li>
+                    <i>|</i>
+                    <li>防晒衬衫</li>
+                    <i>|</i>
+                </ul>
+            </div>
+            <div class="women-clothes">
+                <div class="women-clothes-left">
+                    <div class="arrow">
+                        <a href="javascript:void(0);">&lt;</a>
+                        <a href="javascript:void(0);">&gt;</a>
+                    </div>
+                </div>
+                <div class="women-clothes-right">
+                    <div class="women-clothes-right-top">
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="women-clothes-right-center">
+                        <div class="sumNewClothes">
+                            <a href="#"><img src="images3/right1.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right2.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right3.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="women-clothes-right-bottom">
+                        <div><a href="#"><img src="images3/bottom1.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom2.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom3.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom4.jpg" ></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="women-clothes hide">
+                <div class="women-clothes-left">
+                    <div class="arrow">
+                        <a href="javascript:void(0);">&lt;</a>
+                        <a href="javascript:void(0);">&gt;</a>
+                    </div>
+                </div>
+                <div class="women-clothes-right">
+                    <div class="women-clothes-right-top">
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="women-clothes-right-center">
+                        <div class="sumNewClothes">
+                            <a href="#"><img src="images3/right1.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right3.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right2.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="women-clothes-right-bottom">
+                        <div><a href="#"><img src="images3/bottom2.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom3.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom4.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom1.jpg" ></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="women-clothes hide">
+                <div class="women-clothes-left">
+                    <div class="arrow">
+                        <a href="javascript:void(0);">&lt;</a>
+                        <a href="javascript:void(0);">&gt;</a>
+                    </div>
+                </div>
+                <div class="women-clothes-right">
+                    <div class="women-clothes-right-top">
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="women-clothes-right-center">
+                        <div class="sumNewClothes">
+                            <a href="#"><img src="images3/right1.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right2.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right3.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="women-clothes-right-bottom">
+                        <div><a href="#"><img src="images3/bottom1.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom2.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom3.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom4.jpg" ></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="women-clothes hide">
+                <div class="women-clothes-left">
+                    <div class="arrow">
+                        <a href="javascript:void(0);">&lt;</a>
+                        <a href="javascript:void(0);">&gt;</a>
+                    </div>
+                </div>
+                <div class="women-clothes-right">
+                    <div class="women-clothes-right-top">
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="women-clothes-right-center">
+                        <div class="sumNewClothes">
+                            <a href="#"><img src="images3/right1.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right3.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right2.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="women-clothes-right-bottom">
+                        <div><a href="#"><img src="images3/bottom4.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom3.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom2.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom1.jpg" ></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="women-clothes hide">
+                <div class="women-clothes-left">
+                    <div class="arrow">
+                        <a href="javascript:void(0);">&lt;</a>
+                        <a href="javascript:void(0);">&gt;</a>
+                    </div>
+                </div>
+                <div class="women-clothes-right">
+                    <div class="women-clothes-right-top">
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/05.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/04.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="images2/img1.jpg" alt=""></a>
+                                    <p>
+                                        晚晚风宽松可爱休闲T恤裙
+                                    </p>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/img2.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/01.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="images2/03.jpg" alt=""></a>
+                                    <p>
+                                        夏季新款百搭两件套韩版宽
+                                    </p>
+                                    <p>
+                                        百搭圆领露肩短袖白色T恤
+                                    </p>
+                                    <i><span>￥</span>69</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="women-clothes-right-center">
+                        <div class="sumNewClothes">
+                            <a href="#"><img src="images3/right1.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right2.jpg" alt=""></a>
+                        </div>
+                        <div class="sumNewPay">
+                            <a href="#"><img src="images3/right3.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="women-clothes-right-bottom">
+                        <div><a href="#"><img src="images3/bottom3.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom2.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom4.jpg" ></a> </div>
+                        <div><a href="#"><img src="images3/bottom1.jpg" ></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内衣配饰ornament部分-->
+        <div class="w ornament oranMent">
+            <div class="nav-clothes">
+                <ul>
+                    <b class="iconfont">&#xe64a;</b>
+                    <span>内衣&配饰</span>
+                    <li>睡衣</li>
+                    <i>|</i>
+                    <li>短袜</li>
+                    <i>|</i>
+                    <li>内衣套装</li>
+                    <i>|</i>
+                    <li>棒球帽</li>
+                    <i>|</i>
+                    <li>手表</li>
+                    <i>|</i>
+                </ul>
+            </div>
+            <div class="andOrnament clearfix">
+                <div class="andOrnament-left">
+                    <a href="#"><img src="images3/banner1.jpg" alt=""></a>
+                </div>
+                <ul class="andOrnament-center">
+                    <div class="andOrnament-center1">
+                    <li>
+                        <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                        <p>韩版新款sex睡衣</p>
+                        <span><i>￥</i>39.9</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                        <p>韩版新款sex睡衣</p>
+                        <span><i>￥</i>39.9</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                        <p>韩版新款sex睡衣</p>
+                        <span><i>￥</i>39.9</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images2/images/img1_04.jpg" alt=""></a>
+                        <p>韩版新款sex睡衣</p>
+                        <span><i>￥</i>39.9</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                        <p>韩版新款sex睡衣</p>
+                        <span><i>￥</i>39.9</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images2/images/img1_07.jpg" alt=""></a>
+                        <p>韩版新款sex睡衣</p>
+                        <span><i>￥</i>39.9</span>
+                    </li>
+                </div>
+                    <div class="andOrnament-center1 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_04.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_07.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_09.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center1 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_23.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_24.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_25.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_26.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_27.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center1 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_28.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_29.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_30.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_24.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_18.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center1 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_18.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_28.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <ol class="circle">
+                        <i class="changeNo changeBlack"></i>
+                        <i class="changeNo"></i>
+                        <i class="changeNo"></i>
+                        <i class="changeNo"></i>
+                        <i class="changeNo"></i>
+                    </ol>
+                </ul>
+                <div class="andOrnament-right">
+                    <div class="andOrnament-right-top">
+                        <span>热门商品推荐</span>
+                        <a href="#"><i class="iconfont">&#xe600; </i>换一批</a>
+                    </div>
+                    <ol class="andOrnament-right-center">
+                        <li>
+                        <img src="images3/img1.jpg" alt="">
+                        <p>
+                            夏季简约无痕文胸一片式无 <br>
+                            痕抹胸聚拢无肩带防滑聚拢
+                        </p>
+                        <span><i>￥</i>42.00</span>
+                        </li>
+                        <li>
+                            <img src="images3/img2.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                        <li>
+                            <img src="images3/img3.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                        <li>
+                            <img src="images3/img4.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!--家具电器（和ornament部分相同）-->
+        <div class="w ornament electrice">
+            <div class="nav-clothes">
+                <ul>
+                    <b class="iconfont">&#xe64a;</b>
+                    <span>家具&电器</span>
+                    <li>家纺好货</li>
+                    <i>|</i>
+                    <li>收纳宝盒</li>
+                    <i>|</i>
+                    <li>手机壳</li>
+                    <i>|</i>
+                    <li>美发神器</li>
+                    <i>|</i>
+                    <li>充电宝</li>
+                    <i>|</i>
+                </ul>
+            </div>
+            <div class="andOrnament clearfix">
+                <div class="andOrnament-left">
+                    <a href="#"><img src="images3/banner2.jpg" alt=""></a>
+                </div>
+                <ul class="andOrnament-center">
+                    <div class="andOrnament-center2 ">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_25.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_26.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_27.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_28.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_29.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_30.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center2 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_04.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_07.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center2 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_23.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_24.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_25.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_26.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_27.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center2 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_28.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_29.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_30.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_24.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_18.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <div class="andOrnament-center2 hide">
+                        <li>
+                            <a href="#"><img src="images2/images/img1_03.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_05.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_16.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_18.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_22.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images2/images/img1_28.jpg" alt=""></a>
+                            <p>韩版新款sex睡衣</p>
+                            <span><i>￥</i>39.9</span>
+                        </li>
+                    </div>
+                    <ol class="circle">
+                        <i class="changeNo2 changeBlack"></i>
+                        <i class="changeNo2 "></i>
+                        <i class="changeNo2"></i>
+                        <i class="changeNo2"></i>
+                        <i class="changeNo2"></i>
+                    </ol>
+                </ul>
+                <div class="andOrnament-right">
+                    <div class="andOrnament-right-top">
+                        <span>热门商品推荐</span>
+                        <a href="#"><i class="iconfont">&#xe600;</i> 换一批</a>
+                    </div>
+                    <ol class="andOrnament-right-center">
+                        <li>
+                            <img src="images3/img5.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                        <li>
+                            <img src="images3/img6.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                        <li>
+                            <img src="images3/img7.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                        <li>
+                            <img src="images3/img8.jpg" alt="">
+                            <p>
+                                夏季简约无痕文胸一片式无 <br>
+                                痕抹胸聚拢无肩带防滑聚拢
+                            </p>
+                            <span><i>￥</i>42.00</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <!--bottom部分-->
+        <div class="bottom">
+            <div class="w">
+                <div class="bottom-top">
+                    <dl >
+                        <dt>- 新手帮助 -</dt>
+                        <dd>常见问题</dd>
+                        <dd>自助服务</dd>
+                        <dd>联系客服</dd>
+                        <dd>意见反馈</dd>
+                    </dl>
+                    <dl >
+                        <dt>- 权益保障 -</dt>
+                        <dd>全国包邮</dd>
+                        <dd>7天无理由退货</dd>
+                        <dd>退货运费补贴</dd>
+                        <dd>限时发货</dd>
+                    </dl>
+                    <dl class="pay">
+                        <dt>-支付方式 -</dt>
+                        <dd>微信支付</dd>
+                        <dd>支付宝</dd>
+                        <dd>白付美支付</dd>
+                    </dl>
+                    <dl  class="phone">
+                        <dt>- 移动客户端下载 -</dt>
+                        <dd>蘑菇街</dd>
+                        <dd>美丽说</dd>
+                        <dd>uni引力</dd>
+                    </dl>
+                </div>
+                <div class="bottom-center">
+                    <a href="#">美丽说</a>
+                    <i>|</i>
+                    <a href="#">淘粉吧</a>
+                    <i>|</i>
+                    <a href="#">qq钱包</a>
+                    <i>|</i>
+                    <a href="#">时尚品牌网</a>
+                    <i>|</i>
+                    <a href="#">装修</a>
+                    <i>|</i>
+                    <a href="#">慧聪网</a>
+                    <i>|</i>
+                </div>
+                <div class="bottom-bottom">
+                    <div class="bottom-bottom-top">
+                        <a href="#">关于我们</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">招聘信息</a>
+                        <a href="#">商家入驻</a>
+                        <a href="#">商家后台</a>
+                        <a href="#">蘑菇商学院</a>
+                        <a href="#">商家社区</a>
+                        <a href="#">规则中心</a>
+                        <a href="#">有害信息举报</a>
+                        <a href="#">@2017 ....</a>
+                    </div>
+                    <div>
+                        <span>营业执照：....</span>
+                        <i>|</i>
+                        <span>营业执照：....</span>
+                        <i>|</i>
+                        <span>营业执照：....</span>
+                        <i>|</i>
+                        <span>营业执照：....</span>
+                        <i>|</i>
+                        <span>营业执照：....</span>
+                        <i>|</i>
+                    </div>
+                    <div>
+                        <span>经营许可证：....</span>
+                        <i>|</i>
+                        <span>经营许可证：....</span>
+                        <i>|</i>
+                        <span>经营许可证：....</span>
+                        <i>|</i>
+                        <span>经营许可证：....</span>
+                        <i>|</i>
+                        <span>经营许可证：....</span>
+                        <i>|</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
