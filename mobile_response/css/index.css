@@ -1,0 +1,677 @@
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei",sans-serif;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    text-decoration: none;
+    color: #333;
+}
+@font-face {
+    /*2.申明自己的字体名称*/
+    font-family: 'wjs';
+    /*3.引入字体文件（约束某一段字符代码什么图案）*/
+    src:
+            url(../fonts/MiFie-Web-Font.svg) format('svg'),
+            url(../fonts/MiFie-Web-Font.eot) format('embedded-opentype'),
+            url(../fonts/MiFie-Web-Font.ttf) format('truetype'),
+            url(../fonts/MiFie-Web-Font.woff) format('woff');
+}
+.wjs_icon {
+    font-family: "wjs";
+}
+.wjs_icon_phone::before{
+    content: "\e908";
+}
+.wjs_icon_tel::before{
+    content: "\e909";
+}
+.wjs_icon_tel::before{
+    content: "\e909";
+}
+.wjs_icon_logo::before{
+    content: "\e920";
+}
+.wjs_icon_name::before{
+    content: "\e93e";
+}
+.wjs_icon_dollar::before {
+    content: "\e903";
+}
+.wjs_icon_clock::before{
+    content: "\e906";
+}
+.wjs_icon_video::before{
+    content: "\e905";
+}
+.wjs_icon_news_01::before {
+    content: "\e90e";
+}
+
+.wjs_icon_news_02::before {
+    content: "\e90f";
+}
+
+.wjs_icon_news_03::before {
+    content: "\e910";
+}
+
+.wjs_icon_news_04::before {
+    content: "\e911";
+}
+.wjs_icon_partner01::before {
+    content: "\e946";
+}
+
+.wjs_icon_partner02::before {
+    content: "\e92f";
+}
+
+.wjs_icon_partner03::before {
+    content: "\e92e";
+}
+
+.wjs_icon_partner04::before {
+    content: "\e92a";
+}
+
+.wjs_icon_partner05::before {
+    content: "\e929";
+}
+
+.wjs_icon_partner06::before {
+    content: "\e931";
+}
+
+.wjs_icon_partner07::before {
+    content: "\e92c";
+}
+
+.wjs_icon_partner08::before {
+    content: "\e92b";
+}
+
+.wjs_icon_partner09::before {
+    content: "\e92d";
+}
+
+/*顶部通栏部分*/
+.wjs_topBar{
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+}
+.wjs_topBar>.container {
+}
+.wjs_topBar>.container>.row {
+
+}
+.wjs_topBar>.container>.row>div {
+    height: 40px;
+    border-left: 1px solid #ccc;
+    line-height: 40px;
+    text-align: center;
+}
+.wjs_topBar>.container>.row>div:first-child {
+    border: none;
+}
+/*!*练习一下相邻选择器以及~选择器*!
+!*+选中紧邻着的下一个兄弟元素*!
+.wjs_topBar>.container>.row>div+div {
+    height: 40px;
+    border-left: 1px solid #ccc;
+}
+!*~选中紧邻着的后边的所有兄弟元素*!
+.wjs_topBar>.container>.row>div~div {
+    height: 40px;
+    border-left: 1px solid #ccc;
+}*/
+.wjs_topBar>.container>.row>div>.topBar_app {
+    display: block;
+}
+.topBar_app>img {
+    display: none;
+}
+.topBar_app:hover>img {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    margin-left: -60px;
+}
+.wjs_topBar .btn-register {
+    padding: 3px 12px;
+    background-color: #e92322;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+}
+.wjs_topBar .btn-login {
+    font-size: 12px;
+    color: #333;
+}
+.wjs_topBar .btn-login:hover {
+    text-decoration: none;
+}
+/*顶部通栏结束
+
+    这个栏目有栅格系统的用法
+    有添加的btn用法
+    还有字体图标
+    都没有好好掌握，这些知识点需要记！
+*/
+/*nav导航栏*/
+.wjs_nav {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 30
+}
+.wjs_nav .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs_nav .navbar-brand:hover,
+.wjs_nav .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.wjs_nav .navbar-brand>.wjs_icon_logo {
+    font-size: 50px;
+    color: #e92322;
+    vertical-align: middle;
+}
+.wjs_nav .navbar-brand>.wjs_icon_name {
+    font-size: 36px;
+    color: #333;
+    vertical-align: middle;
+}
+.wjs_nav .navbar-text {
+    color: #777;
+}
+.wjs_nav .navbar-nav > li > a {
+    height: 80px;
+    line-height: 50px;
+    color: #777;
+}
+.wjs_nav .navbar-nav > li > a:hover,
+.wjs_nav .navbar-nav > li > a:focus {
+    color: #777;
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+}
+.wjs_nav .navbar-nav > .active > a,
+.wjs_nav .navbar-nav > .active > a:hover,
+.wjs_nav .navbar-nav > .active > a:focus {
+    color: #555;
+    border-bottom: 3px solid #e92322;
+}
+.wjs_nav .navbar-nav > .disabled > a,
+.wjs_nav .navbar-nav > .disabled > a:hover,
+.wjs_nav .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.wjs_nav .navbar-toggle {
+    margin-top: 23px;
+    border-color: #ddd;
+}
+.wjs_nav .navbar-toggle:hover,
+.wjs_nav .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.wjs_nav .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.wjs_nav .navbar-collapse,
+.wjs_nav .navbar-form {
+    border-color: #e7e7e7;
+}
+.wjs_nav .navbar-nav > .open > a,
+.wjs_nav .navbar-nav > .open > a:hover,
+.wjs_nav .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.wjs_nav .navbar-link {
+    color: #777;
+}
+.wjs_nav .navbar-link:hover {
+    color: #333;
+}
+.wjs_nav .btn-link {
+    color: #777;
+}
+.wjs_nav .btn-link:hover,
+.wjs_nav .btn-link:focus {
+    color: #333;
+}
+.wjs_nav .btn-link[disabled]:hover,
+fieldset[disabled] .wjs_nav .btn-link:hover,
+.wjs_nav .btn-link[disabled]:focus,
+fieldset[disabled] .wjs_nav .btn-link:focus {
+    color: #ccc;
+}
+/*
+    nav部分结束
+    这一部分我学到了如何修改bootstrap的样式
+    ctrl+r 是全部替换
+    然后再逐一寻找来修改别的样式
+*/
+/*轮播图banner部分*/
+.wjs_banner .pc_imgBox{
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wjs_banner .m_imgBox{
+    display: block;
+    width: 100%;
+}
+.wjs_banner .m_imgBox img{
+    display: block;
+    width: 100%;
+}
+/*交易信息栏*/
+.wjs_info {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+.wjs_info>.container {
+    width: 900px;
+}
+@media (max-width: 992px) and (min-width: 768px){
+    .wjs_info>.container {
+        width: 750px;
+    }
+}
+.wjs_info>.container>div {
+    padding: 15px 0;
+}
+.wjs_info>.container>div>a {
+    display: block;
+    padding: 0 15px ;
+}
+.wjs_info>.container>div>a:hover {
+    color: #e92322;
+}
+.wjs_info>.container>div>a .wjs_icon_dollar {
+    font-size: 30px;
+}
+/*预约模块*/
+.wjs_book {
+    border-bottom: 1px solid #ccc;
+    padding: 40px 0;
+}
+.wjs_book>.container {
+    width: 900px;
+
+}
+@media (max-width: 992px) and (min-width: 768px){
+    .wjs_book>.container {
+        width: 750px;
+    }
+}
+@media (max-width: 768px){
+    .wjs_book>.container {
+        width: 100%;
+    }
+}
+.wjs_book .book_go {
+    border-bottom: 1px dashed #e92322;
+    color: #e92322;
+}
+.wjs_book .book_video:hover {
+    color: #e92322;
+}
+.wjs_book .wjs_icon_clock {
+    font-size: 21px;
+}
+.wjs_book .wjs_icon_video {
+    font-size: 21px;
+    margin-right: 7px;
+}
+/*产品模块*/
+.wjs_product {
+    padding: 20px 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+.wjs_product .nav-tabs-parent {
+    width: 100%;
+    overflow: hidden;
+}
+.wjs_product .nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.wjs_product .nav-tabs > li {
+    float: left;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+.wjs_product .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    border-radius: 4px 4px 0 0;
+}
+.wjs_product .nav-tabs > li > a:hover {
+    background: #f5f5f5;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
+    background-color: #f5f5f5;
+    cursor: default;
+    border: none;
+    border-bottom: 3px solid #e92322;
+}
+.wjs_product .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.wjs_product .nav-tabs.nav-justified > li {
+    float: none;
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wjs_product .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .wjs_product .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .wjs_product .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.wjs_product .nav-tabs.nav-justified > .active > a,
+.wjs_product .nav-tabs.nav-justified > .active > a:hover,
+.wjs_product .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .wjs_product .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .wjs_product .nav-tabs.nav-justified > .active > a,
+    .wjs_product .nav-tabs.nav-justified > .active > a:hover,
+    .wjs_product .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.product_box {
+
+}
+.product_box > div {
+    height: 150px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px #d8d8d8;
+    margin-top: 30px;
+}
+.product_box_left {
+    overflow: hidden;
+}
+.product_box_left h3 {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #666;
+}
+.product_box_left>div {
+    font-size: 12px;
+    color: #666;
+}
+.product_box_right {
+    float: right;
+    width: 80px;
+    border-left: 1px dashed #ccc;
+    position: relative;
+}
+.product_box_right::before,.product_box_right::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+.product_box_right::before {
+    left: -8px;
+    top: -8px;
+}
+.product_box_right::after {
+    left: -8px;
+    bottom: -8px;
+}
+.product_box_right p:first-child {
+    font-weight: 700;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin-top: 20px;
+    
+}
+.product_box_right p:first-child sub {
+    font-size: 12px;
+}
+.product_box_right p:last-child {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+.product_box.active .product_box_left{
+    background-color: #e92322;
+    color: #fff;
+}
+.product_box.active::before {
+    content: "\e915";
+    position: absolute;
+    left: 15px;
+    top: 23px;
+    font-family: wjs;
+    font-size: 33px;
+    color: #e92322;
+    z-index: 2;
+    color: #fff;
+}
+.product_box.active .product_box_right {
+    background-color: #e92322;
+}
+.product_box.active .product_box_left h3 {
+    color: #fff;
+}
+.product_box.active .product_box_left>div {
+    font-size: 12px;
+    color: #fff;
+}
+.product_box.active .product_box_right p {
+    color: #fff;
+}
+/*新闻模块*/
+.wjs_news {
+    padding: 40px 0;
+    border-bottom: 1px solid #ccc;
+}
+.wjs_news>.news_p p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.wjs_news>.news_p p::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    right: -4px;
+    bottom: -4px
+}
+.wjs_news .nav-tabs {
+    border-bottom: none;
+    position: relative;
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .wjs_news .nav-tabs > li > a{
+        margin: 30px 80px;
+    }
+}
+@media (max-width: 768px) {
+    .wjs_news .nav-tabs>li {
+        margin-top: 50px;
+        width: 25%;
+    }
+    .wjs_news .nav-tabs > li a{
+        margin:0 auto;
+    }
+}
+.wjs_news .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.wjs_news .nav-tabs > li:last-child a{
+    margin-bottom: 0;
+}
+.wjs_news .nav-tabs > li > a {
+    margin-right: 0;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: #ccc;
+    margin-bottom:60px;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.wjs_news .nav-tabs > li > a:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #ccc;
+    border: none;
+    border-bottom-color: #fff;
+}
+.wjs_news .nav-tabs > li.active > a,
+.wjs_news .nav-tabs > li.active > a:hover,
+.wjs_news .nav-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    background-color: #e92322;
+    border: none;
+    border-bottom-color: transparent;
+}
+.wjs_news .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.wjs_news .nav-tabs.nav-justified > li {
+    float: none;
+}
+.wjs_news .nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wjs_news .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .wjs_news .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .wjs_news .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.wjs_news .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.wjs_news .nav-tabs.nav-justified > .active > a,
+.wjs_news .nav-tabs.nav-justified > .active > a:hover,
+.wjs_news .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .wjs_news .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .wjs_news .nav-tabs.nav-justified > .active > a,
+    .wjs_news .nav-tabs.nav-justified > .active > a:hover,
+    .wjs_news .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.wjs_news .newLine {
+    position: absolute;
+    height: 100%;
+    border: 1px dashed #ccc;
+    left: 30px;
+}
+.wjs_news .news_content {
+    list-style: none;
+}
+.wjs_news .news_content>li {
+    padding: 15px 0;
+}
+.wjs_news .news_content>li a {
+    color: #666;
+}
+/*合作伙伴*/
+.wjs_partner {
+    text-align: center;
+    font-size: 80px;
+    padding: 40px 0;
+}

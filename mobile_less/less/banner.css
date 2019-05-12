@@ -1,0 +1,21 @@
+/*轮播图*/
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+.banner ul {
+  width: 1000%;
+}
+.banner ul li {
+  float: left;
+  width: 10%;
+}
+.banner ul li a {
+  display: block;
+  width: 100%;
+}
+.banner ul li a img {
+  display: block;
+  width: 100%;
+}
+/*# sourceMappingURL=banner.css.map */

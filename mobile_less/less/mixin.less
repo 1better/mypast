@@ -1,0 +1,9 @@
+//函数
+.adapterMixin(@index) when ( @index > 0){
+  @media (min-width: extract(@adapterDeviceList,@index)){
+    html{
+      font-size: @baseFontSize / @psdWidth * extract(@adapterDeviceList,@index);
+    }
+  }
+  .adapterMixin( @index - 1);
+}
