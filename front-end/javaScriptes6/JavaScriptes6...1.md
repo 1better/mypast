@@ -27,7 +27,7 @@
 >
 > Object扩展
 >
-> > Object.creat(prototype,[description])(经典继承)
+> > Object.create(prototype,[description])(经典继承)
 > >
 > > > - 以指定对象为原型创建新的对象
 > > >
@@ -189,8 +189,8 @@
 > > code：
 > >
 > > > function Person(**x=1,y=1**){
-> > >  this.x = x;
-> > >  this.y = y;
+> > >  	this.x = x;
+> > >  	this.y = y;
 > > > }
 > > > let p = new Person();
 > > > console.log(p);

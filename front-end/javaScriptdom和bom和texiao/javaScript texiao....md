@@ -111,7 +111,7 @@
 >
 > > 在页面的位置 =  看得见+看不见
 > >
-> > pageY =  event.clientY + seroll().Top（封装的被卷去的头部）
+> > pageY =  event.clientY + scroll().Top（封装的被卷去的头部）
 
 ## client家族
 
@@ -156,7 +156,7 @@
 >
 > onmouseup/onmousedown = onclick
 >
-> **window.screnn.width**	获取屏幕高度
+> **window.screen.width**	获取屏幕高度
 
 ## 冒泡
 

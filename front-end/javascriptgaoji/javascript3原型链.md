@@ -7,7 +7,7 @@
 > > 1. 混入式继承
 > >
 > >    ```javascript
-> >    for(var i in obj){
+> >    for(var i in obk){
 > >        obj2[i] = obk[i];
 > >    }
 > >    ```
